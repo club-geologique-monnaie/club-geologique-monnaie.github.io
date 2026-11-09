@@ -1,0 +1,169 @@
+/* Page « Les découvreurs du temps » — styles propres à la page,
+   complémentaires de /style.css et de Bootstrap 5 */
+
+main.decouvreurs {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 16px 40px;
+	line-height: 1.6;
+}
+main.decouvreurs p { text-align: justify; hyphens: auto; }
+
+/* Titre de la page */
+.decouvreurs .titre-page { text-align: center; margin-top: 20px; }
+.decouvreurs .titre-page h2 { font-size: 2rem; letter-spacing: .03em; margin-bottom: .2em; }
+.decouvreurs .titre-page .sous-titre { font-style: italic; text-align: center; font-size: 1.1rem; }
+.decouvreurs .titre-page .date { text-align: center; font-size: .9rem; color: #666; }
+
+/* Sommaire */
+.decouvreurs .sommaire {
+	background: #f4f6f8;
+	border-radius: 12px;
+	padding: 14px 22px;
+	margin: 24px 0 32px;
+}
+/* Le sommaire est un <nav> : neutralise les styles généraux du site appliqués aux <nav> (largeur, marges, fond)
+   pour qu'il reste aligné sur la largeur du texte et des photos */
+.decouvreurs nav.sommaire { display: block; width: auto !important; min-width: 0 !important; max-width: none !important; float: none !important;
+	margin-left: 0 !important; margin-right: 0 !important; box-sizing: border-box; position: static !important; }
+.decouvreurs .sommaire h2 { font-size: 1.2rem; margin: 0 0 .4em; }
+.decouvreurs .sommaire ol { list-style: none; padding-left: 0; margin: 0; columns: 2; column-gap: 30px; }
+.decouvreurs .sommaire li { margin: .15em 0; break-inside: avoid; }
+@media (max-width: 700px) { .decouvreurs .sommaire ol { columns: 1; } }
+
+/* Chapitres */
+.decouvreurs section.chapitre { margin-top: 36px; }
+.decouvreurs section.chapitre h2 { border-bottom: 2px solid #2E74B5; padding-bottom: .2em; }
+.decouvreurs section.chapitre h3 { font-size: 1.15rem; color: #2E74B5; margin-top: 1.4em; }
+.decouvreurs .mise-en-avant { text-align: center; font-size: 1.1rem; margin: 1em 0; }
+
+/* Figures */
+.decouvreurs figure.figure { display: block; margin: 18px auto; text-align: center; }
+.decouvreurs figure.figure img { max-width: 100%; max-height: 520px; height: auto; border-radius: 10px; }
+.decouvreurs figure.figure.large img { max-height: none; }
+.decouvreurs figure.figure.large img { width: 100%; }
+.decouvreurs figure.figure figcaption {
+	font-size: .85rem; font-style: italic; color: #555; margin-top: 6px; text-align: center;
+}
+.decouvreurs figure.float { float: right; width: 38%; margin: 4px 0 12px 20px; }
+.decouvreurs figure.float.gauche { float: left; margin: 4px 20px 12px 0; }
+.decouvreurs figure.float figcaption em { font-style: normal; }   /* noms de genre en romain dans une légende en italique */
+@media (max-width: 700px) { .decouvreurs figure.float, .decouvreurs figure.float.gauche { float: none; width: 100%; margin: 12px 0; } }
+.decouvreurs figure.gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.decouvreurs figure.gallery img { height: 250px; width: auto; object-fit: cover; }
+@media (max-width: 700px) { .decouvreurs figure.gallery img { height: 170px; } }
+.decouvreurs figure.gallery figcaption { flex-basis: 100%; }
+.decouvreurs section::after { content: ""; display: block; clear: both; }
+
+/* Appels de référence */
+.decouvreurs a.cite { font-size: .8em; vertical-align: super; text-decoration: none; margin-left: 1px; }
+
+/* Encadré (échange sur le forum) */
+.decouvreurs aside.encadre {
+	background: #f2f6fa;
+	border-left: 5px solid #2E74B5;
+	border-radius: 0 12px 12px 0;
+	padding: 16px 22px;
+	margin: 24px 0;
+}
+.decouvreurs aside.encadre h4 { color: #2E74B5; font-size: 1.1rem; margin-bottom: .6em; }
+.decouvreurs aside.encadre p.chapeau { font-style: italic; }
+.decouvreurs aside.encadre p.replique { font-size: .95rem; margin: .35em 0 .35em 12px; }
+.decouvreurs aside.encadre figure.gallery img { height: 140px; }
+
+/* Références */
+.decouvreurs .liste-references { font-size: .9rem; padding-left: 2.2em; }
+.decouvreurs .liste-references li { margin-bottom: .5em; text-align: left; word-break: break-word; }
+.decouvreurs .liste-references li:target { background: #fff6cc; }
+
+/* Fable */
+.decouvreurs .fable { display: flex; gap: 30px; align-items: flex-start; margin: 20px 0; }
+.decouvreurs .fable-texte { flex: 1 1 auto; }
+.decouvreurs .fable-texte h4 { color: #2E74B5; }
+.decouvreurs .fable-texte p { text-align: left; margin: 0; }
+.decouvreurs .fable-texte p.moralite-titre { font-weight: bold; font-style: italic; margin-top: 1em; }
+.decouvreurs .fable-texte p.moralite { font-style: italic; }
+.decouvreurs .fable-texte p.signature { text-align: left; font-style: italic; margin-top: 1em; }
+.decouvreurs .fable figure { flex: 0 0 34%; margin-top: 50px; }
+@media (max-width: 700px) {
+	.decouvreurs .fable { flex-direction: column; }
+	.decouvreurs .fable figure { display: none; }   /* photo de la fable masquée sur téléphone */
+}
+
+
+/* Galerie des trouvailles (annexe 1)
+   Seuils alignés sur ceux de Bootstrap 5 (md = 768 px, lg = 992 px) :
+   3 colonnes (3×5) sur téléphone, 4 colonnes (4×4) sur écran moyen, 5 colonnes (5×3) sur grand écran.
+   La 16e photo (.seulement-4x4) n'est affichée que dans la grille 4×4. */
+.decouvreurs figure.gallery.trouvailles {
+	display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 10px; max-width: 900px;
+}
+@media (min-width: 768px) { .decouvreurs figure.gallery.trouvailles { grid-template-columns: repeat(4, 1fr); gap: 14px 12px; } }
+@media (min-width: 992px) { .decouvreurs figure.gallery.trouvailles { grid-template-columns: repeat(5, 1fr); } }
+.decouvreurs figure.trouvailles figure.vignette.seulement-4x4 { display: none; }
+@media (min-width: 768px) and (max-width: 991.98px) { .decouvreurs figure.trouvailles figure.vignette.seulement-4x4 { display: block; } }
+
+.decouvreurs figure.trouvailles figure.vignette { margin: 0; text-align: center; }
+.decouvreurs figure.trouvailles figure.vignette img {
+	display: block; width: 100%; aspect-ratio: 3 / 4; height: auto; object-fit: cover; border-radius: 8px;
+	transition: transform .2s, box-shadow .2s;
+}
+/* Dent de requin : photo entière, sans recadrage ni fond en haut et en bas */
+.decouvreurs figure.trouvailles figure.vignette.entiere img { object-fit: contain; border-radius: 0; }
+.decouvreurs figure.trouvailles figure.vignette a:hover img { transform: scale(1.03); box-shadow: 0 4px 12px rgba(0,0,0,.25); }
+.decouvreurs figure.trouvailles figure.vignette.entiere a:hover img { box-shadow: none; }
+.decouvreurs figure.trouvailles figure.vignette figcaption { font-size: .8rem; margin-top: 4px; font-style: normal; line-height: 1.3; }
+.decouvreurs figure.trouvailles figure.vignette figcaption em { font-style: italic; }
+.decouvreurs figure.trouvailles figcaption.credit { grid-column: 1 / -1; margin-top: 4px; }
+.decouvreurs figure a img { cursor: zoom-in; }
+
+/* Encadré de téléchargement des PDF (haut de page) : un encadré divisé en deux, empilé sur téléphone */
+.decouvreurs .telechargements {
+	display: grid; grid-template-columns: 1fr 1fr;
+	margin: 24px 0 8px;
+	background: #f4f6f8; border-top: 4px solid #2E74B5; border-radius: 10px;
+}
+.decouvreurs .telechargement { display: flex; flex-direction: column; padding: 14px 22px 18px; }
+.decouvreurs .telechargement + .telechargement { border-left: 1px solid #cfd8e3; }
+@media (max-width: 767.98px) {
+	.decouvreurs .telechargements { grid-template-columns: 1fr; }
+	.decouvreurs .telechargement + .telechargement { border-left: none; border-top: 1px solid #cfd8e3; }
+}
+.decouvreurs .telechargement .type {
+	margin: 0; font-size: .8rem; font-weight: bold; letter-spacing: .06em; text-transform: uppercase; color: #2E74B5; text-align: left;
+}
+.decouvreurs .telechargement h3 { font-size: 1.2rem; margin: .25em 0 .4em; }
+.decouvreurs .telechargement p { font-size: .95rem; text-align: left; margin-bottom: .9em; }
+.decouvreurs .telechargement .bouton {
+	margin-top: auto; align-self: flex-start;
+	background: #2E74B5; color: #fff; text-decoration: none; font-weight: bold;
+	padding: 8px 16px 8px 40px; border-radius: 6px; position: relative;
+}
+.decouvreurs .telechargement .bouton::before {
+	content: ""; position: absolute; left: 14px; top: 50%; width: 16px; height: 16px; transform: translateY(-50%);
+	background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11'/%3E%3C/svg%3E");
+}
+.decouvreurs .telechargement .bouton:hover, .decouvreurs .telechargement .bouton:focus { background: #245d92; color: #fff; }
+
+/* Icônes des arguments examinés (partie 8) : sous le titre, à gauche, le texte les habille */
+.decouvreurs section.chapitre p img.icone { float: left; width: 60px; height: 60px; margin: 4px 14px 6px 0; }
+@media (max-width: 700px) { .decouvreurs section.chapitre p img.icone { width: 46px; height: 46px; margin-right: 10px; } }
+
+/* Références repliées par défaut (dépliées automatiquement en suivant un appel [n]) */
+.decouvreurs details.references-pliables > summary {
+	cursor: pointer; font-weight: bold; color: #2E74B5; padding: 6px 0 10px; list-style-position: inside;
+}
+.decouvreurs details.references-pliables > summary .fermer { display: none; }
+.decouvreurs details.references-pliables[open] > summary .ouvrir { display: none; }
+.decouvreurs details.references-pliables[open] > summary .fermer { display: inline; }
+
+/* Bouton flottant « Sommaire », affiché une fois le sommaire dépassé */
+.decouvreurs .bouton-sommaire {
+	position: fixed; right: 18px; bottom: 18px; z-index: 1000;
+	background: #2E74B5; color: #fff; text-decoration: none; font-weight: bold; font-size: .95rem;
+	padding: 9px 16px; border-radius: 22px; box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+	opacity: 0; visibility: hidden; transition: opacity .25s, visibility .25s;
+}
+.decouvreurs .bouton-sommaire.visible { opacity: 1; visibility: visible; }
+.decouvreurs .bouton-sommaire:hover, .decouvreurs .bouton-sommaire:focus { background: #245d92; color: #fff; }
+@media print { .decouvreurs .bouton-sommaire { display: none; } }

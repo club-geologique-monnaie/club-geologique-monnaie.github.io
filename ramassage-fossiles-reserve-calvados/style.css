@@ -1,0 +1,428 @@
+body {
+	/*background-color: antiquewhite;*/
+	background-color: antiquewhite;
+	color: black;
+	padding-bottom: 20px;
+}
+
+/* -------------------- En-tête -------------------- */
+
+header {
+	background-color: bisque;
+	color: wheat;
+	width: 100%;
+	height: 110px;
+	box-shadow: 0px 1px 10px darkolivegreen;
+	background-image: url("images/faluns.jpg");
+}
+header div {
+	height: 110px;
+	display: table;
+	position: relative;
+}
+header img {
+	height: 110px;
+	max-width: max-content;
+	margin: 0;
+	position: relative;
+	z-index: 1;
+}
+header img.pre {
+	float: left;
+}
+header h1 {
+	display: inline-block;
+	padding-top: 17px;
+	vertical-align: middle;
+	margin: 0;
+	padding-left: 10px;
+	font-size: 2.2em;
+	background-color: rgba(255, 228, 196, 0.6);
+	color: black;
+	border-top-left-radius: 45px;
+	border-top-right-radius: 45px;
+}
+
+
+/* -------------------- Menu -------------------- */
+
+nav {
+	margin: auto;
+}
+nav.navbar {
+	display: block !important;
+	height: 40px;
+	/*background: #48435C;*/
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+nav #navbar {
+	justify-content: space-around;
+	align-items: center;
+	margin: auto;
+	background: darkcyan;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	box-shadow: 2px -2px 7px darkgray;
+	/*box-shadow: 2px -2px 7px darkgray, -2px 0px 5px darkolivegreen;*/
+	position: relative;
+	z-index: 10000;
+	//padding-right: 4rem;
+}
+nav #navbar .dropdown-toggle:hover + .dropdown-menu {
+	display: block;
+}
+nav #navbar .dropdown-toggle + .dropdown-menu:hover {
+	display: block;
+}
+nav #navbar .dropdown-menu {
+	background: darkcyan;
+	margin-top: 0px;
+	z-index: 10000;
+}
+nav .navbar-nav .nav-link {
+	color: white !important;
+	z-index: 10000;
+}
+nav .navbar-nav .nav-link.active {
+	/*background: darkslategray !important;*/
+	/*background: teal !important;*/
+	background: #026e6e !important;
+}
+nav .nav-item {
+	margin-left: 20px;
+}
+nav .nav-link:hover {
+	/*background: #48435C;*/
+	background: mediumseagreen;
+	/*background: white;
+	color: black !important;*/
+}
+nav .navbar-toggler {
+	padding: 0px;
+}
+nav .navbar-toggler:focus {
+	box-shadow: 0 0 0 0 !important;
+}
+
+.navbar-toggler-icon {
+	background-image: url("images/menu-btn.png");
+}
+.menu {
+	position: relative;
+}
+.connect {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0 5px;
+}
+.connect.phone {
+	display: none;
+}
+.connect a {
+	color: #48b9b3;
+}
+.connect.pc a.nav-link {
+	padding-right: 0.6rem;
+}
+.connect.phone a.nav-link {
+	padding: .25rem 0.6rem;
+}
+
+/* -------------------- Sections en accordéon -------------------- */
+
+.categorie. ul.accordion-collapse, .categorie ul.details {
+	list-style: none;
+	padding-left: 0;
+}
+div.details {
+	padding-top: 15px;
+	margin-bottom: 35px;
+}
+
+.categorie.accordion-item, .categorie .accordion-button {
+	background-color: antiquewhite;
+	border: 0;
+	box-shadow: none;
+	color: inherit;
+}
+.categorie.accordion-item {
+	margin-top: 35px;
+}
+.categorie .accordion-button {
+	background: #57b6b9;
+	font-size: xx-large;
+	border: 1px solid beige;
+	cursor: pointer;
+	z-index: 10;
+	border-top-left-radius: 15px !important;
+	border-top-right-radius: 15px !important;
+}
+
+
+/* -------------------- Présentation générale -------------------- */
+
+main {
+	padding-top: 15px;
+}
+img {
+	max-width: 100%;
+}
+img.icone {
+	margin-right: 10px;
+}
+.espece {
+	font-style: italic;
+}
+
+
+/* -------------------- Illustrations -------------------- */
+
+.card {
+	background: inherit;
+	padding-top: 7px;
+}
+.card-body {
+	font-size: small;
+	font-style: italic;
+	padding: 5px;
+}
+.card img, figure img {
+	border-radius: 5px;
+}
+p.card-text {
+	margin-bottom: 0;
+}
+figure.left {
+	float: left;
+	margin-right: 1rem;
+	margin-top: 7px;
+}
+figure.right {
+	float: right;
+	margin-left: 1rem;
+	margin-top: 7px;
+}
+figcaption {
+	font-style: italic;
+	font-size: 0.9em;
+}
+
+
+/* -------------------- Responsive design -------------------- */
+
+@media handheld {
+	header h1 {
+		width: 470px;
+	}
+	header img.post {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 900px) {  /* Bootsrap : lg   >= 992px  /   xl   >= 1200px   /   xxl   >= 1400px  */
+	header div {
+		width: 900px;
+		margin: auto;
+		text-align: center;
+	}
+	header img.post {
+		float: right;
+	}
+	header h1 {
+		width: 610px;
+		padding-bottom: 40px;
+		margin-left: 60px;
+	}
+	main {
+		width: 900px;
+		margin: auto;
+	}
+	nav{
+		width: 900px;
+		margin-top: -40px;
+		padding-left: 30px;
+	}
+	nav #navbar {
+		width: 688px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 900px) {  /* Bootsrap : md   >= 768px && < 992px */
+	header div {
+		width: 100%;
+		margin: auto;
+		text-align: center;
+	}
+	header img.post {
+		display: none;
+	}
+	header h1 {
+		width: 600px;
+		padding-bottom: 40px;
+		margin-left: 20px;
+	}
+	main {
+		width: 755px; /* prise en compte de l'ascenseur à gauche */
+		margin: auto;
+	}
+	nav {
+		width: 100%;
+		margin: 0;
+		margin-top: -40px;
+		padding-left: 110px;
+	}
+	nav #navbar {
+		width: 633px;
+	}
+	nav .nav-item {
+	  margin-left: 10px !important;
+	}
+}
+
+@media (max-width: 610px) {    /* Pour éviter le chevauchement du bouton de connexion sur la fin du menu */
+	nav .nav-item {
+		margin-left: 15px;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 768px) {  /* Bootsrap : sm   >= 576px && < 768px */
+	header div {
+		width: 100%;
+		margin: auto;
+		text-align: center;
+	}
+	header img.pre {
+		position: absolute;
+		left: 0;
+	}
+	header img.post {
+		display: none;
+	}
+	header h1 {
+		position: absolute;
+		left: 125px;
+		bottom: 0;
+		padding-right: 45px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		border-top-right-radius: 0;
+	}
+	nav.navbar {
+		//height: 40px !important;
+		height: 2em;
+		background: darkcyan;
+		box-shadow: 0px 1px 5px darkcyan;
+	}
+	main {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	nav li.connect {
+		position: relative;
+	}
+	.dropdown-menu {
+		margin-left: 30px;
+	}
+	.dropdown-menu li {
+		margin-left: 15px;
+	}
+	.connect.pc {
+		display: none;
+	}
+	.connect.phone {
+		height: 2em;
+		display: block;
+		color: yellow;
+	}
+}
+
+@media (max-width: 576px) {  /* Bootsrap : xs   < 576px */
+	header div {
+		width: 100%;
+		margin: auto;
+		text-align: center;
+	}
+	header img.pre {
+		position: absolute;
+		left: 0;
+	}
+	header img.post {
+		display: inline-block;
+		margin-left: 124px;
+		display: none;
+	}
+	header h1 {
+		position: absolute;
+		left: 125px;
+		font-size: 2rem;
+		bottom: 0;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		border-top-right-radius: 0;
+	}
+	nav.navbar {
+		height: 2em;
+		background: darkcyan;
+		box-shadow: 0px 1px 5px darkcyan;
+	}
+	main {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	figure.left {
+		margin-right: 0;
+	}
+	figure.right {
+		margin-left: 0;
+	}
+	.dropdown-menu {
+		margin-left: 30px;
+	}
+	.dropdown-menu li {
+		margin-left: 15px;
+	}
+	.connect.pc {
+		display: none;
+	}
+	.connect.phone {
+		height: 2em;
+		display: block;
+		color: yellow;
+	}
+}
+
+@media (max-width: 400px) {
+	header img.pre {
+		position: absolute;
+		left: 0;
+	}
+	header h1 {
+		position: absolute;
+		left: 125px;
+		font-size: 1.7rem;
+		padding-left: 5px;
+		border-top-right-radius: 0;
+	}
+	header img.post {
+		display: none;
+	}
+}
+@media (max-width: 300px) {
+	header img.pre {
+		position: absolute;
+		left: 0;
+	}
+	header h1 {
+		position: absolute;
+		left: 125px;
+		font-size: 1.3rem;
+		font-weight: bold;
+		padding-left: 5px;
+		border-top-right-radius: 0;
+	}
+	header img.post {
+		display: none;
+	}
+}
